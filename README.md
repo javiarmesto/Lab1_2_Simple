@@ -1,44 +1,63 @@
-Vendor Copilot Assistant – Ejercicio Práctico de Extensión para Business Central
-Resumen
-Este repositorio contiene un ejemplo de extensión para Microsoft Dynamics 365 Business Central que integra capacidades de IA (Copilot) en la gestión de proveedores. La extensión permite generar descripciones, categorías, términos de pago y checklists inteligentes para proveedores, todo desde el propio BC.
+# 🚀 Vendor Copilot Assistant – Ejercicio Práctico para Business Central
 
-Estructura del Proyecto
-app.json: Configuración principal de la extensión (nombre, dependencias, rangos de objetos, etc.).
-vendor_capability_enum.al: Extensión del enum Copilot Capability para registrar la nueva capacidad de gestión de proveedores.
-vendor_card_extension.al: Extensión de la página “Vendor Card” que añade una acción para lanzar la asistencia de Copilot.
-vendor_list_extension.al: Extensión de la página “Vendor List” que añade acceso directo al asistente Copilot.
-vendor_copilot_assistant.al: Página principal del asistente Copilot, donde se introduce la información del proveedor y se generan sugerencias inteligentes usando IA.
-Ejercicio Paso a Paso
-1. Clona el repositorio
-bash
-git clone https://github.com/javiarmesto/Lab1_1_Simple.git
-Abre la carpeta en Visual Studio Code.
+¡Bienvenido/a! Este repositorio contiene un ejemplo de extensión para **Microsoft Dynamics 365 Business Central** que integra capacidades de IA (Copilot) en la gestión de proveedores.  
+La extensión permite generar sugerencias inteligentes y mejorar la experiencia de usuario en la gestión de proveedores.
 
-2. Descarga los símbolos y conecta tu entorno
-Presiona Ctrl+Shift+P y ejecuta AL: Download Symbols para conectar con tu sandbox de Business Central.
-3. Analiza los objetos AL
-Abre y revisa los archivos .al y su documentación (comentarios /// <summary>).
-Observa cómo se añaden acciones a las páginas de proveedores y cómo se lanza la página de asistente.
-4. Prueba la extensión en tu entorno
-Publica la extensión (Ctrl+Shift+P → AL: Publish).
-Entra en la lista o ficha de proveedores y prueba las nuevas acciones:
-Vendor Card: Botón "Mejorar con Copilot".
-Vendor List: Botón "Asistente Copilot".
-5. Explora y extiende la funcionalidad
-Algunas ideas de mejora o ejercicios:
+---
 
-Añade más tipos de asistencia en la página Vendor Copilot Assistant.
-Modifica los prompts para personalizar las sugerencias de IA.
-Añade nuevas acciones contextuales o campos.
-Mejora la experiencia de usuario con validaciones o mensajes personalizados.
-6. Documenta tus cambios
-Comenta tu código y detalla cualquier cambio relevante para que otros puedan entender tu aportación.
+## 📂 Estructura del Proyecto
 
-7. Sube tus cambios
-bash
-git add .
-git commit -m "Mejoras y extensión de Vendor Copilot Assistant"
-git push
-Recursos útiles
-Documentación AL
-Extensiones de ejemplo
+- `app.json`: Configuración principal de la extensión (nombre, dependencias, objetos, etc.).
+- `vendor_capability_enum.al`: Enum extendido para registrar la nueva capacidad de gestión de proveedores.
+- `vendor_card_extension.al`: Extensión de la página **Vendor Card** con acción para lanzar Copilot.
+- `vendor_list_extension.al`: Extensión de la página **Vendor List** con acceso directo al asistente.
+- `vendor_copilot_assistant.al`: Página principal del asistente Copilot, donde se generan sugerencias inteligentes usando IA.
+
+---
+
+## 🛠️ Ejercicio Paso a Paso
+
+1. **Clona el repositorio**
+   ```bash
+   git clone https://github.com/javiarmesto/Lab1_1_Simple.git
+   ```
+   Abre la carpeta en Visual Studio Code.
+
+2. **Descarga los símbolos y conecta tu entorno**
+   - Pulsa `Ctrl+Shift+P` y ejecuta `AL: Download Symbols` para conectar con tu sandbox de Business Central.
+
+3. **Analiza los objetos AL**
+   - Explora los archivos `.al` y revisa los comentarios/documentación.
+   - Observa cómo se añaden acciones a las páginas y cómo se lanza el asistente.
+
+4. **Prueba la extensión**
+   - Publica la extensión (`Ctrl+Shift+P` → `AL: Publish`).
+   - Prueba los nuevos botones:
+     - Vendor Card: Botón **"Mejorar con Copilot"**
+     - Vendor List: Botón **"Asistente Copilot"**
+
+5. **Explora y extiende la funcionalidad**
+   - 💡 Ideas:
+     - Añade más tipos de asistencia en la página del asistente.
+     - Personaliza los prompts para sugerencias de IA.
+     - Agrega nuevas acciones o campos contextuales.
+     - Mejora la experiencia con validaciones o mensajes personalizados.
+
+6. **Documenta tus cambios**
+   - Comenta tu código y explica tus aportaciones para facilitar el trabajo en equipo.
+
+7. **Sube tus cambios**
+   ```bash
+   git add .
+   git commit -m "Mejoras y extensión de Vendor Copilot Assistant"
+   git push
+   ```
+
+---
+
+## 📚 Recursos útiles
+
+- [Documentación AL](https://docs.microsoft.com/es-es/dynamics365/business-central/dev-itpro/developer/)
+- [Ejemplos de Extensiones](https://github.com/microsoft/ALAppExtensions)
+
+---
