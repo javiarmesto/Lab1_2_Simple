@@ -5,13 +5,21 @@ using Microsoft.Foundation.Address;
 /// <summary>
 /// Página principal del asistente Copilot para gestión de proveedores
 /// Permite generar descripciones, categorías, términos de pago y checklists
-/// </summary>
+/// En realidad, esta página es un PromptDialog que interactúa con Azure OpenAI.
+/// El usuario puede introducir información del proveedor y seleccionar el tipo de asistencia deseada.  
+/// El contenido generado por IA se muestra en un campo de texto enriquecido.
+/// Esta página no tiene una SourceTable física, ya que es un PromptDialog.
+/// El usuario puede confirmar o descartar los cambios generados por IA.
+/// Pero no guardaremos nada, no hemos añadido la lógica para ello, pero recordar que debemos usar tablas temporales por Responsabilidad AI
+/// Esta página es un ejemplo de cómo integrar IA en la gestión de proveedores en Business Central.
+/// 
 page 50100 "Vendor Copilot Assistant"
 {
     PageType = PromptDialog;
     ApplicationArea = All;
     Caption = 'Vendor Copilot Assistant';
     PromptMode = Prompt;
+    //SourceTable = "Copilot XXX temporal";// No se usa SourceTable físico, ya que es un PromptDialog
     Extensible = false;
 
     layout
@@ -74,6 +82,9 @@ page 50100 "Vendor Copilot Assistant"
     {
         area(SystemActions)
         {
+            // Puedes tener un comportamiento personalizado para las acciones principales del sistema en una página de tipo PromptDialog, como generar una sugerencia con Copilot, regenerar o descartar la sugerencia.
+            // Cuando desarrolles una funcionalidad de Copilot, recuerda: el usuario siempre debe tener el control (el usuario debe confirmar cualquier cosa que Copilot sugiera antes de que se guarde algún cambio).
+            // Esta es también la razón por la cual no puedes tener una SourceTable física en una página de tipo PromptDialog (debes usar una tabla temporal o ninguna tabla).
             systemaction(Generate)
             {
                 Caption = 'Generar con Copilot';
@@ -108,6 +119,19 @@ page 50100 "Vendor Copilot Assistant"
                         Message('✅ Contenido generado exitosamente. Revisa el resultado y confirma si deseas aplicar los cambios.');
                 end;
             }
+            //Importante: En un PromptDialog, las acciones de sistema como "Generate", "Regenerate" y "Discard" no tienen un SourceTable asociado, ya que no se guardan cambios directamente en una tabla.
+            systemaction(OK)
+            {
+                Caption = 'Confirmar';
+                ToolTip = 'Confirmar y guardar cambios';
+            }
+            systemaction(Cancel)
+            {
+                Caption = 'Descartar';
+                ToolTip = 'Descartar cambios y cerrar el asistente';
+            }
+
+
         }
 
         area(PromptGuide)
@@ -251,8 +275,12 @@ page 50100 "Vendor Copilot Assistant"
                     'para una comparación completa. Formato HTML con tablas comparativas y puntuaciones.';
         end;
 
+<<<<<<< HEAD
         // [COPILOT] Añadir contexto al final del prompt
         exit(SystemPrompt + RegionContext + DetailContext);
+=======
+        exit(SystemPrompt);
+>>>>>>> 41f07941ed36b4efe687b1def9edaf48035068a5
     end;
 
     /// <summary>
