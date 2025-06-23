@@ -15,8 +15,8 @@ pageextension 50101 "Vendor Card Copilot Ext" extends "Vendor Card"
                 ApplicationArea = All;
                 Caption = 'Mejorar con Copilot';
                 ToolTip = 'Usa IA para generar descripción y categorización basada en la información actual del proveedor';
-                Image = Robot;
-                
+                Image = Sparkle;
+
                 trigger OnAction()
                 var
                     VendorCopilotPage: Page "Vendor Copilot Assistant";
