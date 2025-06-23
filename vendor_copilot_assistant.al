@@ -275,12 +275,11 @@ page 50100 "Vendor Copilot Assistant"
                     'para una comparación completa. Formato HTML con tablas comparativas y puntuaciones.';
         end;
 
-<<<<<<< HEAD
+
         // [COPILOT] Añadir contexto al final del prompt
         exit(SystemPrompt + RegionContext + DetailContext);
-=======
-        exit(SystemPrompt);
->>>>>>> 41f07941ed36b4efe687b1def9edaf48035068a5
+
+
     end;
 
     /// <summary>
