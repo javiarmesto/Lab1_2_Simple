@@ -15,8 +15,8 @@ pageextension 50100 "Vendor List Copilot Ext" extends "Vendor List"
                 ApplicationArea = All;
                 Caption = 'Asistente Copilot';
                 ToolTip = 'Usa IA para generar información detallada de proveedores';
-                Image = Robot;
-                
+                Image = Sparkle;
+
                 trigger OnAction()
                 begin
                     Page.Run(Page::"Vendor Copilot Assistant");
