@@ -263,15 +263,7 @@ begin
 end;
 ```
 
-### 5. **Beneficios de las Extensiones**
 
-- ✅ **Más opciones de análisis**: Análisis de riesgo y comparación de proveedores
-- ✅ **Personalización regional**: Adaptación a regulaciones locales
-- ✅ **Niveles de detalle**: Respuestas adaptadas a la necesidad específica
-- ✅ **Clasificación por prioridad**: Gestión estratégica de proveedores
-- ✅ **Validaciones robustas**: Mejor experiencia de usuario
-- ✅ **Mensajes informativos**: Feedback claro durante el proceso
-- ✅ **Ejemplos adicionales**: Más casos de uso predefinidos
 
 ---
 
