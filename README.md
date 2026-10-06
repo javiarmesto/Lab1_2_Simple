@@ -1,5 +1,21 @@
 # 🚀 Vendor Copilot Assistant – Ejercicio Práctico para Business Central
 
+## Antes de empezar
+
+Laboratorio **Vendor Copilot Assistant**: estudiar las acciones Copilot añadidas a la ficha/lista de proveedores y el diálogo del asistente.
+
+**Referencia del checkout:** `application 26.0.0.0`, `runtime 15.0`; extensión `Vendor Copilot Assistant` versión `1.0.0.0`. Es la configuración del manifiesto, no una prueba de compatibilidad con otros entornos.
+
+1. Clona `https://github.com/javiarmesto/Lab1_2_Simple.git` y abre la carpeta en VS Code con AL Language.
+2. Configura tu sandbox en `.vscode/launch.json` (créalo si falta), comprueba las dependencias de [app.json](app.json) y descarga símbolos con **AL: Download Symbols**.
+3. Compila con `Ctrl+Shift+B`; publica en el sandbox con `F5` cuando hayas completado la configuración específica del ejemplo.
+4. Abre Proveedores y localiza la acción del asistente; comprueba el diálogo con datos de prueba. Una respuesta de IA requiere completar la autorización de Azure OpenAI del ejemplo.
+
+**Mapa del ejemplo:** [recomendaciones de aula](RECOMENDACIONES_AULA.md), `vendor_copilot_assistant.al`, extensiones de ficha/lista y enum de capacidad.
+
+**Límites:** El manifiesto comparte app ID/rango con Lab1_1; no instales ambos a la vez sin adaptar tu copia. El `.app` y `.alpackages/` se conservan como material existente, no como una release validada. La revisión documental del 6 de octubre de 2026 es estática; no acredita compilación, publicación ni llamadas a servicios externos.
+
+
 ¡Bienvenido/a! Este repositorio contiene un ejemplo de extensión para **Microsoft Dynamics 365 Business Central** que integra capacidades de IA (Copilot) en la gestión de proveedores.  
 La extensión permite generar sugerencias inteligentes y mejorar la experiencia de usuario en la gestión de proveedores.
 
