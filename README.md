@@ -19,7 +19,7 @@ La extensión permite generar sugerencias inteligentes y mejorar la experiencia 
 
 1. **Clona el repositorio**
    ```bash
-   git clone https://github.com/javiarmesto/Lab1_1_Simple.git
+   git clone https://github.com/javiarmesto/Lab1_2_Simple.git
    ```
    Abre la carpeta en Visual Studio Code.
 
